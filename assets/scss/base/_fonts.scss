@@ -1,0 +1,128 @@
+// @font-face {
+//   font-family: "Graphik-ThinItalic";
+//   src: url("../../fonts/Graphik-ThinItalic.eot");
+//   src: url("../../fonts/Graphik-ThinItalic.eot?#iefix")
+//       format("embedded-opentype"),
+//     url("../../fonts/Graphik-ThinItalic.svg#Graphik-ThinItalic") format("svg"),
+//     url("../../fonts/Graphik-ThinItalic.ttf") format("truetype"),
+//     url("../../fonts/Graphik-ThinItalic.woff") format("woff"),
+//     url("../../fonts/Graphik-ThinItalic.woff2") format("woff2");
+// }
+
+@font-face {
+  font-family: "Graphik-Thin";
+  src: url("../../fonts/graphik/Graphik-Thin.eot");
+  src: url("../../fonts/graphik/Graphik-Thin.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/graphik/Graphik-Thin.svg#Graphik-Thin") format("svg"),
+    url("../../fonts/graphik/Graphik-Thin.ttf") format("truetype"),
+    url("../../fonts/graphik/Graphik-Thin.woff") format("woff"),
+    url("../../fonts/graphik/Graphik-Thin.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik-Regular";
+  src: url("../../fonts/graphik/Graphik-Regular.eot");
+  src: url("../../fonts/graphik/Graphik-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/graphik/Graphik-Regular.svg#Graphik-Regular") format("svg"),
+    url("../../fonts/graphik/Graphik-Regular.ttf") format("truetype"),
+    url("../../fonts/graphik/Graphik-Regular.woff") format("woff"),
+    url("../../fonts/graphik/Graphik-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik-Medium";
+  src: url("../../fonts/graphik/Graphik-Medium.eot");
+  src: url("../../fonts/graphik/Graphik-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/graphik/Graphik-Medium.svg#Graphik-Medium") format("svg"),
+    url("../../fonts/graphik/Graphik-Medium.ttf") format("truetype"),
+    url("../../fonts/graphik/Graphik-Medium.woff") format("woff"),
+    url("../../fonts/graphik/Graphik-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik-Semibold";
+  src: url("../../fonts/graphik/Graphik-Semibold.eot");
+  src: url("../../fonts/graphik/Graphik-Semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/graphik/Graphik-Semibold.svg#Graphik-Semibold")
+      format("svg"),
+    url("../../fonts/graphik/Graphik-Semibold.ttf") format("truetype"),
+    url("../../fonts/graphik/Graphik-Semibold.woff") format("woff"),
+    url("../../fonts/graphik/Graphik-Semibold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik-Bold";
+  src: url("../../fonts/graphik/Graphik-Bold.eot");
+  src: url("../../fonts/graphik/Graphik-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/graphik/Graphik-Bold.svg#Graphik-Bold") format("svg"),
+    url("../../fonts/graphik/Graphik-Bold.ttf") format("truetype"),
+    url("../../fonts/graphik/Graphik-Bold.woff") format("woff"),
+    url("../../fonts/graphik/Graphik-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+// Made Fonts
+@font-face {
+  font-family: "MADEMirage-Thin";
+  src: url("../../fonts/made/MADEMirage-Thin.eot");
+  src: url("../../fonts/made/MADEMirage-Thin.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/made/MADEMirage-Thin.svg#MADEMirage-Thin") format("svg"),
+    url("../../fonts/made/MADEMirage-Thin.ttf") format("truetype"),
+    url("../../fonts/made/MADEMirage-Thin.woff") format("woff"),
+    url("../../fonts/made/MADEMirage-Thin.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MADEMirage";
+  src: url("../../fonts/made/MADEMirage.eot");
+  src: url("../../fonts/made/MADEMirage.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/made/MADEMirage.svg#MADEMirage") format("svg"),
+    url("../../fonts/made/MADEMirage.ttf") format("truetype"),
+    url("../../fonts/made/MADEMirage.woff") format("woff"),
+    url("../../fonts/made/MADEMirage.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MADEMirage-Medium";
+  src: url("../../fonts/made/MADEMirage-Medium.eot");
+  src: url("../../fonts/made/MADEMirage-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/made/MADEMirage-Medium.svg#MADEMirage-Medium")
+      format("svg"),
+    url("../../fonts/made/MADEMirage-Medium.ttf") format("truetype"),
+    url("../../fonts/made/MADEMirage-Medium.woff") format("woff"),
+    url("../../fonts/made/MADEMirage-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MADEMirage-Bold";
+  src: url("../../fonts/made/MADEMirage-Bold.eot");
+  src: url("../../fonts/made/MADEMirage-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/made/MADEMirage-Bold.svg#MADEMirage-Bold") format("svg"),
+    url("../../fonts/made/MADEMirage-Bold.ttf") format("truetype"),
+    url("../../fonts/made/MADEMirage-Bold.woff") format("woff"),
+    url("../../fonts/made/MADEMirage-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}

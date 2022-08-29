@@ -1,0 +1,37 @@
+.services-section {
+  padding: 64px 0px;
+
+  @include respond(medium) {
+    padding: 44px 0px;
+  }
+  @include respond(tabland) {
+    padding: 32px 0px;
+  }
+
+  .flexRow {
+    margin-bottom: 128px;
+    @include respond(xl) {
+      margin-bottom: 100px;
+    }
+    @include respond(medium) {
+      margin-bottom: 80px;
+    }
+    @include respond(tabland) {
+      margin-bottom: 60px;
+    }
+    @include respond(tabport) {
+      margin-bottom: 45px;
+    }
+  }
+  .block__content {
+    p {
+      padding-right: 23px;
+      @include respond(tabland) {
+        padding-right: 10px;
+      }
+      @include respond(tabport) {
+        padding-right: 0px;
+      }
+    }
+  }
+}

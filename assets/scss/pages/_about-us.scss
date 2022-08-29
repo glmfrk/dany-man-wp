@@ -1,0 +1,212 @@
+.about__banner {
+  .hero_content {
+    .hero_content-title {
+      margin-bottom: 64px;
+    }
+  }
+}
+
+.about__features {
+  .block__content {
+    .title__content {
+      padding-right: 0;
+    }
+  }
+  .block__content.right-content {
+    padding-right: 50px;
+    @include respond(tabland) {
+      padding-right: 0;
+    }
+  }
+}
+
+.about__block-sec {
+  padding: 0;
+}
+.about__block-01,
+.about__block-04 {
+  padding: 64px 0px;
+  .left-content {
+    p {
+      padding-right: 20px;
+      @include respond(tabport) {
+        padding-right: 0;
+      }
+    }
+  }
+}
+.about__block-02 {
+  padding: 64px 0px;
+  .title__content {
+    position: relative;
+    z-index: 1;
+    font-size: 90px;
+    @include respond(xl) {
+      font-size: 72px;
+    }
+    @include respond(medium) {
+      font-size: 64px;
+    }
+    @include respond(tabland) {
+      font-size: 52px;
+    }
+    @include respond(tabport) {
+      font-size: 42px;
+    }
+
+    @include respond(phone) {
+      font-size: 32px;
+    }
+    @include respond(phone-sm) {
+      font-size: 29px;
+    }
+  }
+  .title-top {
+    margin-bottom: -64px;
+    @include respond(tabland) {
+      margin-bottom: -36px;
+    }
+    @include respond(tabport) {
+      margin-bottom: -29px;
+    }
+    @include respond(phone) {
+      margin-bottom: -20px;
+    }
+    @include respond(phone-sm) {
+      margin-bottom: 10px;
+    }
+  }
+  .title-bottom {
+    margin-top: -64px;
+    margin-bottom: 0px;
+    @include respond(tabland) {
+      margin-top: -36px;
+    }
+    @include respond(tabport) {
+      margin-top: -29px;
+    }
+    @include respond(phone) {
+      margin-top: -20px;
+    }
+    @include respond(phone-sm) {
+      margin-top: 10px;
+    }
+  }
+}
+.about__block-03 {
+  padding: 64px 0px;
+  .right-content {
+    margin-bottom: 30px;
+    p {
+      margin-bottom: 32px;
+    }
+  }
+}
+.about__block-04 {
+  padding: 64px 0px 128px;
+}
+
+.counter__block-sec {
+  background: #f9f0ec;
+  padding: 128px 0px 64px;
+
+  @include respond(phone) {
+    padding: 80px 0px 40;
+  }
+  .flexRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3%;
+    @include respond(tabport) {
+      gap: 3%;
+    }
+    @include respond(phone-mid) {
+      flex-direction: column;
+    }
+    .column-item {
+      margin-bottom: 64px;
+      flex-basis: 30%;
+      @include respond(tabport) {
+        margin-bottom: 32px;
+        flex-basis: 48%;
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .block__content {
+    @include respond(phone) {
+      text-align: center;
+    }
+    .title__content {
+      font-size: 68px;
+      color: $clrDefault;
+      margin: 0;
+      @include respond(tabland) {
+        font-size: 48px;
+      }
+      @include respond(tabport) {
+        font-size: 36px;
+      }
+      @include respond(phone) {
+        font-size: 32px;
+      }
+    }
+    .content {
+      p {
+        color: $clrDefault;
+        @include respond(phone) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+.about__sec {
+  padding: 128px 0px 64px;
+  @include respond(tabland) {
+    padding: 64px 0px;
+  }
+  @include respond(phone) {
+    padding: 45px 0px;
+  }
+  .sec__title {
+    font-size: 50px;
+    text-align: center;
+    max-width: 750px;
+    margin: 0px auto 64px;
+    @include respond(tabland) {
+      font-size: 36px;
+      margin: 0px auto 45px;
+    }
+    @include respond(phone) {
+      font-size: 29px;
+    }
+    @include respond(phone-sm) {
+      font-size: 24px;
+    }
+  }
+  .title__content {
+    margin-bottom: 8px;
+  }
+  .content {
+    margin-bottom: 32px;
+  }
+  .block__content {
+    p {
+      padding-right: 40px;
+      @include respond(tabland) {
+        padding-right: 0;
+      }
+    }
+  }
+  .button__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}

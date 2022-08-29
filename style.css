@@ -1,0 +1,291 @@
+/*!
+Theme Name: dany man
+Theme URI: https://xirosoft.com/demo/dany-man/
+Author: Gulam Faruk
+Author URI: https://www.linkedin.com/in/gulamfaruk/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: dany-man
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+dany man is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/*
+************************* DOCUMENT STYLES START HERE **************************
+*/
+
+body {
+  color: #fff;
+}
+
+.single__page-content {
+  padding: 160px 0px 100px;
+}
+.single__post__article {
+  padding-bottom: 45px;
+  margin-bottom: 45px;
+  border-bottom: 1.5px solid rgb(63, 62, 62);
+}
+.post-navigation,
+.post-pagination {
+  margin-bottom: 45px;
+}
+.post-navigation .nav-links a {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: inherit;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.post-navigation .screen-reader-text {
+  font-size: 36px;
+  line-height: 140%;
+  font-family: inherit;
+  margin-bottom: 20px;
+}
+
+.column-item .contents .category-title a {
+  display: inline-block;
+}
+.slide-item > a {
+  display: inherit;
+}
+.search-form .screen-reader-text {
+  display: none;
+}
+.search-form {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  position: relative;
+  perspective: 500px;
+  transform-style: preserve-3d;
+  /* animation: rotateAngle 5s linear infinite alternate; */
+}
+.search-form label {
+  display: block;
+}
+.search-form input {
+  width: 100%;
+  display: block;
+  padding: 12px 120px 12px 30px;
+  font-size: 18px;
+  line-height: 140%;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  position: relative;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  outline: none;
+}
+.search-form input[type="submit"] {
+  font-family: cursive;
+  font-weight: 400;
+  font-style: italic;
+  border: none;
+  padding: 12px 30px;
+  box-shadow: -1px 1px 0px #dfd8d8;
+  transform: translateY(-50%);
+  transition: all 0.5s linear;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 2;
+  width: auto;
+}
+
+.search-form input[type="submit"]:focus,
+.search-form input[type="submit"]:hover {
+  /* color: #53488d;
+  background-color: #ffe5e5; */
+  color: #ffffff;
+  background-color: #0e0e0e;
+  background-image: url("assets/images/button-img.svg");
+  animation: animatedBackground 5s linear infinite alternate;
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes rotateAngle {
+  0% {
+    transform: rotateY(0deg) rotateX(5deg);
+    animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+  }
+  25% {
+    transform: rotateY(10deg) rotateX(5deg);
+  }
+  50% {
+    transform: rotateY(0deg) rotateX(5deg);
+    animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+  }
+  75% {
+    transform: rotateY(-10deg) rotateX(5deg);
+  }
+  100% {
+    transform: rotateY(0deg) rotateX(5deg);
+  }
+}
+
+footer br,
+form br {
+  display: none;
+}
+address br,
+.address br {
+  display: block;
+}
+
+.error-404 .page-header {
+  text-align: center;
+}
+.error-404 h3 {
+  font-size: 36px;
+}
+.error-404 .page-content .search-form {
+  margin-bottom: 50px;
+}
+.error-404 .page-content {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 120px;
+}
+.error-404 .page-content h4 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+.error-404 .page-content .go_back {
+  color: #fff;
+  margin: 30px 0px;
+  font-size: 24px;
+}
+.error-404 .page-content .go_back > a {
+  color: #8cc63f;
+  text-decoration: underline !important;
+  font-size: 24px;
+  display: inline-block;
+  margin: 0;
+}
+
+.entry-footer {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  font-size: 17px;
+}
+
+/* ===================
+Comments Form Design  */
+
+.comment-body {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0px;
+  margin-bottom: 20px;
+}
+.comment-author {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.comment-author img {
+  width: 75px;
+  border: 2px solid #8cc63f;
+  border-radius: 50%;
+  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+.comment-reply-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+p.logged-in-as {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.comment-form p {
+  position: relative;
+}
+.comment-form p > label {
+  color: #fff;
+  display: block;
+}
+.comment-form p > input {
+  display: block;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+.comment-form .comment-form-cookies-consent {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+.comment-form input[type="submit"] {
+  padding: 8px 25px;
+}
+.comment-form textarea#comment {
+  padding: 10px 30px;
+  outline: 2px solid #8cc63f;
+  border: 2px solid #f9f0ec;
+  border-radius: 10px;
+}

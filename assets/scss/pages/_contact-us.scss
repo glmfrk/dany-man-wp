@@ -1,0 +1,20 @@
+.contact__banner {
+  padding-bottom: 0;
+  .hero_content {
+    .hero_content-title {
+      margin-bottom: 64px;
+    }
+  }
+  .right-scroll-bar {
+    display: none;
+  }
+}
+.contact__block-sec {
+  padding: 64px 0px 128px;
+}
+.contact__block-sec .block__content p {
+  margin-bottom: 16px;
+}
+.contact__block-sec .block__content p:last-child {
+  margin-bottom: 0px;
+}

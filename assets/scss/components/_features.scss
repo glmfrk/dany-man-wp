@@ -1,0 +1,42 @@
+.features__block-sec {
+  padding: 64px 0px;
+  @include respond(medium) {
+    padding: 44px 0px;
+  }
+  @include respond(tabland) {
+    padding: 32px 0px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    @include respond(phone) {
+      gap: 40px;
+    }
+  }
+  .block__content {
+    .title__content {
+      padding-right: 100px;
+      @include respond(xl) {
+        padding-right: 80px;
+      }
+      @include respond(medium) {
+        padding-right: 40px;
+      }
+      @include respond(tabland) {
+        padding-right: 0px;
+      }
+    }
+    p {
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .block__content.right-content {
+    margin: 0;
+    padding: 0;
+  }
+}

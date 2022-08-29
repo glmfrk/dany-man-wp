@@ -1,0 +1,187 @@
+.footer {
+  padding: 64px 0px 16px;
+  background: #f9f0ec;
+  .footer-top {
+    margin-bottom: 96px;
+    @include respond(tabland) {
+      margin-bottom: 54px;
+    }
+    @include respond(tabport) {
+      margin-bottom: 32px;
+    }
+    @include respond(phone) {
+      margin-bottom: 16px;
+    }
+
+    .heading {
+      font-family: $fontMADEMirage;
+      font-weight: $fontRegular;
+      font-size: 28px;
+      line-height: 140%;
+      color: $body-color;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      @include respond(tabland) {
+        font-size: 22px;
+        margin-bottom: 22px;
+      }
+
+      @include respond(tabport) {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      @include respond(phone) {
+        font-size: 18px;
+      }
+    }
+    .footer-column {
+      margin-bottom: 32px;
+      p,
+      a {
+        font-family: $fontGraphik;
+        font-weight: $fontRegular;
+        font-size: 16px;
+        line-height: 140%;
+        color: $body-color;
+        @include respond(phone-mid) {
+          font-size: 14px;
+        }
+      }
+
+      a {
+        display: inline-block;
+        transition: $transition;
+        &:hover {
+          color: $clrBtn;
+        }
+      }
+      .footer-menu,
+      .footer-social-menu {
+        list-style: none;
+        a {
+          display: inherit;
+          text-transform: capitalize;
+          text-decoration: none;
+          transition: $transition;
+          margin-bottom: 16px;
+        }
+        li {
+          &:last-child {
+            a {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      .contact-info {
+        .address {
+          display: inline-block;
+          font-family: $fontGraphik;
+          font-weight: $fontRegular;
+          font-size: 16px;
+          line-height: 140%;
+          color: $body-color;
+          margin-bottom: 16px;
+          @include respond(phone-mid) {
+            font-size: 14px;
+          }
+        }
+        p {
+          display: block;
+          margin-bottom: 16px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    width: 100%;
+    .site-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include respond(phone-mid) {
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+    }
+
+    p {
+      font-family: $fontGraphik;
+      font-weight: $fontRegular;
+      font-size: 12px;
+      line-height: 16px;
+      line-height: 24px;
+      color: $body-color;
+      a {
+        color: $body-color;
+        display: inline-block;
+        transition: $transition;
+        &:hover {
+          color: $clrBtn;
+        }
+      }
+    }
+    .right-item {
+      p {
+        font-size: 14px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: capitalize;
+      }
+      a,
+      img {
+        display: inline-block;
+        width: auto;
+      }
+    }
+  }
+}
+
+// Email Subscription Form Here..
+.newsletter {
+  p {
+    margin-bottom: 32px;
+  }
+  form {
+    width: 100%;
+    position: relative;
+    .email_subscripton {
+      width: inherit;
+      position: inherit;
+      input,
+      button {
+        display: inherit;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        width: 100%;
+        background: transparent;
+
+        font-family: $fontGraphik;
+        font-weight: $fontRegular;
+        font-size: 10px;
+        line-height: 11px;
+        color: $body-color;
+      }
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+        background-color: transparent !important;
+      }
+      [type="email"] {
+        padding: 8px 0px;
+        border-bottom: 1px solid $body-color;
+      }
+      [type="submit"] {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: auto;
+      }
+    }
+  }
+}

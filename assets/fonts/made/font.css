@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'MADEMirage-Medium';
+  src: url('MADEMirage-Medium.eot');
+  src: url('MADEMirage-Medium.eot?#iefix') format('embedded-opentype'),
+       url('MADEMirage-Medium.svg#MADEMirage-Medium') format('svg'),
+       url('MADEMirage-Medium.ttf') format('truetype'),
+       url('MADEMirage-Medium.woff') format('woff'),
+       url('MADEMirage-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

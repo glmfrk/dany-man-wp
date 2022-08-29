@@ -1,0 +1,431 @@
+.header-part {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  padding: 32px 10px;
+  background: transparent;
+  @include respond(medium) {
+    padding: 30px 15px 30px;
+  }
+}
+.header-sticky {
+  padding: 25px 10px;
+  background: #8cc63f;
+  border: 1px solid #8cc63f;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 9;
+  animation: sticky 0.5s;
+  box-shadow: 1px 3px 20px 2px rgba(103, 105, 106, 0.31);
+
+  .primary-menu {
+    ul {
+      a {
+        &:focus,
+        &:hover {
+          color: $clrDefault;
+        }
+      }
+    }
+  }
+
+  .header-btn {
+    .btn-primary {
+      border: 1px solid #6bbb03;
+    }
+  }
+  .navigation-wrapper {
+    .toggler-button {
+      background: transparent;
+      border: 1px solid #6bbb03;
+      transition: $transition;
+      span {
+        background: #000;
+      }
+      &:hover {
+        background: #fff;
+      }
+    }
+    .toggler-button.on {
+      span {
+        &:nth-child(1) {
+          background: #6bbb03;
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          background: #6bbb03;
+        }
+      }
+    }
+  }
+}
+@keyframes sticky {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+.navigation-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .header-btn {
+    .btn {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: $fontSemi;
+      padding: 13px 32px;
+      color: #131413;
+      text-transform: uppercase;
+      @include respond(phone) {
+        font-size: 15px;
+        padding: 10px 20px;
+      }
+      @include respond(phone-mid) {
+        display: none;
+      }
+    }
+  }
+}
+
+.primary-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 10px;
+  @include respond(phone) {
+    gap: 5px;
+  }
+  ul {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    gap: 10px;
+    margin-right: 12px;
+    @include respond(tabland) {
+      gap: 7px;
+      margin-right: 8px;
+    }
+    @include respond(tabport) {
+      display: none;
+    }
+    a {
+      font-family: $fontGraphik;
+      font-weight: $fontRegular;
+      font-size: 16px;
+      line-height: 18px;
+      text-transform: uppercase;
+      color: $clrWhite;
+      padding: 12px 15px;
+      margin-right: 3px;
+      transition: $transition;
+      @include respond(tabland) {
+        padding: 10px 10px;
+      }
+      &:hover {
+        color: $clrPrimary;
+      }
+    }
+  }
+}
+
+.toggler-button {
+  position: relative;
+  width: 54px;
+  height: 48px;
+  background: transparent;
+  border: 1px solid $clrWhite;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  display: none;
+  @include respond(tabport) {
+    display: flex;
+  }
+  @include respond(phone) {
+    width: 54px;
+    height: 42px;
+  }
+  span {
+    width: 70%;
+    height: 3px;
+    background: $clrWhite;
+    margin: 3px 10px 3px 7px;
+    transition: all 0.3s;
+    display: block;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    &:nth-child(1) {
+      width: 60%;
+    }
+    &:nth-child(2) {
+      width: 50%;
+    }
+    &:nth-child(3) {
+      width: 58%;
+    }
+  }
+}
+
+.toggler-button.on {
+  border: 1px solid $clrBtn;
+  span {
+    &:nth-child(1) {
+      background: $clrBtn;
+      transform: rotate(45deg) translate(5px, 5px);
+      width: 80%;
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      background: $clrBtn;
+      transform: rotate(-45deg) translate(7px, -8px);
+      width: 80%;
+    }
+  }
+}
+
+// Drop Down Menu Styles
+.menu-item {
+  position: relative;
+  .subitem {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 200px;
+    height: 100%;
+    display: block;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: all 0.4s linear;
+    li {
+      a {
+        display: block;
+        padding: 15px 0px;
+        color: $clrDefault;
+        background: #f5efde;
+        padding-left: 20px;
+        transform: all 0.4s linear;
+        &:hover {
+          color: $clrPrimary;
+        }
+      }
+    }
+  }
+  &:hover {
+    .subitem {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+// ============================
+// OverLay Slide Start
+// ============================
+
+.overlay-slide {
+  position: fixed;
+  background-color: $body-color;
+  top: 0;
+  left: -350px;
+  width: 320px;
+  z-index: 9999;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition;
+  overflow: hidden;
+  box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.2);
+
+  @include respond(phone-xm) {
+    width: 300px;
+  }
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    z-index: 9999;
+  }
+  nav {
+    position: relative;
+    height: 100%;
+    padding: 25px;
+    text-align: left;
+
+    .main-nav {
+      list-style: none;
+      padding: 30px 0px 0px;
+      display: inline-block;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      line-height: 1;
+
+      li {
+        display: block;
+        position: relative;
+
+        &.sub-menu {
+          a {
+            &::after {
+              content: "\f078";
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              font-size: 13px;
+              color: #000;
+              margin-left: 10px;
+              transition: all 0.3s linear;
+              position: absolute;
+              right: 20px;
+              top: 50%;
+              transform: translateY(-50%);
+              display: none;
+            }
+          }
+        }
+
+        a {
+          font-family: $fontGraphik;
+          font-size: 16px;
+          font-weight: $fontMid;
+          color: $clrWhite;
+          display: block;
+          padding: 15px 0px;
+          text-transform: capitalize;
+          transition: $transition;
+          position: relative;
+          border-top: 1px dashed #e7e7e7;
+
+          &.active,
+          &:hover {
+            color: $clrPrimary;
+          }
+        }
+
+        .fa {
+          width: 16px;
+          text-align: center;
+          margin-right: 20px;
+          float: right;
+        }
+      }
+      .sub-item {
+        margin-left: 30px;
+
+        a {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .logo {
+    position: relative;
+    img {
+      width: auto;
+      height: auto;
+      display: block;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      height: 35px;
+      width: 35px;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+      @include flex-box;
+      cursor: pointer;
+      transition: 0.3s linear;
+
+      a {
+        font-size: 16px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// ============================
+// OverLay Slide End
+// ============================
+
+// ============================
+// Bg Shade Start
+// ============================
+
+.bg-shade {
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: #000;
+}
+
+body.body-overlay .bg-shade {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: 0.3s linear;
+  background: #000;
+  transition: 0.3s linear;
+  opacity: 0.9;
+}
+
+// ============================
+// Bg Shade Start
+// ============================
+
+// =============================
+// Sticky
+// =============================
+
+.nav-scroll {
+  background-color: $clrPrimary;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: fixed !important;
+  top: -80px;
+  right: 0;
+  left: 0;
+  transform: translateY(80px);
+  transition: transform 0.5s;
+  z-index: 999;
+
+  @include respond(tabland) {
+    // padding: 24px 15px !important;
+  }
+
+  .header-logo {
+    display: block !important;
+  }
+}

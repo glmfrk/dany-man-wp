@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Graphik-ExtralightItalic";
+  src: url("Graphik-ExtralightItalic.eot");
+  src: url("Graphik-ExtralightItalic.eot?#iefix") format("embedded-opentype"),
+    url("Graphik-ExtralightItalic.svg#Graphik-ExtralightItalic") format("svg"),
+    url("Graphik-ExtralightItalic.ttf") format("truetype"),
+    url("Graphik-ExtralightItalic.woff") format("woff"),
+    url("Graphik-ExtralightItalic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}

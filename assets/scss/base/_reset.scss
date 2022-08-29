@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: $body-color;
+  font-family: "Graphik-ThinItalic";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 400;
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    padding: 0px 10px;
+  }
+}
+
+// ========================
+// row Custom
+// ========================
+.row > * {
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 1);
+  padding-left: calc(var(--bs-gutter-x) * 1);
+  margin-top: var(--bs-gutter-y);
+}
+
+// ========================
+// row Custom
+// ========================
+
+a {
+  text-decoration: none !important;
+  display: inline-block;
+  color: inherit;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: 0px;
+    color: $clrPrimary;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $fontMADEMirage;
+}
+
+h1 {
+  font-family: $fontMADEMirage;
+  font-weight: $fontRegular;
+  font-size: 90px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: $clrContent;
+  @include respond(xl) {
+    font-size: 72px;
+  }
+  @include respond(medium) {
+    font-size: 64px;
+  }
+  @include respond(tabland) {
+    font-size: 52px;
+  }
+  @include respond(tabport) {
+    font-size: 42px;
+  }
+
+  @include respond(phone) {
+    font-size: 32px;
+  }
+  @include respond(phone-sm) {
+    font-size: 29px;
+  }
+}
+
+h2 {
+  font-size: 52px;
+  line-height: 62px;
+  font-weight: $fontBold;
+  color: $clrWhite;
+  margin-bottom: 0;
+
+  @include respond(tabland) {
+    font-size: 50px;
+  }
+  @include respond(tabport) {
+    font-size: 36px;
+    line-height: 45px;
+  }
+  @include respond(phone-sm) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+h5 {
+  font-family: $fontGraphik;
+  font-size: 18px;
+  font-weight: $fontMid;
+  line-height: 27px;
+}
+
+figure {
+  margin: 0;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.btn-round {
+  border-radius: 4px !important;
+}
+
+.bg-white {
+  background-color: $clrDefault !important;
+}
+.bg-color {
+  background: #f9fafb !important;
+}
+.bg-footer {
+  background: #1f1f1f !important;
+}
+
+p {
+  font-family: $fontGraphik;
+  color: $clrDefault;
+  font-size: 16px;
+  font-weight: $fontRegular;
+  line-height: 26px;
+  padding: 0;
+  margin: 0;
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  &:hover,
+  &:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.column-revers {
+  @include respond(tabland) {
+    flex-direction: column-reverse !important;
+  }
+}
+
+@include section-title;
+@include block-contents;
+@include socialLinks;
+@include btnWrapper;
+@include single_page;
+ul,
+li {
+  list-style: none;
+  text-decoration: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+section {
+  display: block;
+  position: relative;
+  padding: 80px 0;
+  width: 100%;
+  overflow: hidden;
+
+  @include respond(tabland) {
+    padding: 80px 0px;
+  }
+  @include respond(tabland) {
+    padding: 60px 0px;
+  }
+}
+
+@media (min-width: 479px) and (max-width: 576px) {
+  .col-xs-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}

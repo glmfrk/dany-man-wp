@@ -1,0 +1,97 @@
+.btn {
+  font-family: $fontGraphik;
+  font-weight: $fontRegular;
+  font-size: 16px;
+  line-height: 18px;
+  // height: 48px;
+  padding: 13px 32px;
+  border-radius: 0px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.5s;
+  pointer-events: auto;
+  z-index: 1;
+  overflow: hidden;
+  @include respond(tabport) {
+    padding: 11px 20px;
+    font-size: 14px;
+  }
+  @include respond(phone) {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  i {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+  }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   z-index: -1;
+  //   background: $clrWhite;
+  //   border-radius: 28px;
+  //   border-color: $clrDefault;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   transform: scaleX(0);
+  //   transform-origin: 0 50%;
+  //   transition-property: transform, -webkit-transform;
+  //   transition-duration: 0.5s;
+  //   transition-timing-function: ease-out;
+  // }
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+  }
+  &-primary {
+    border: 2px solid $clrBtn;
+    background: $clrBtn;
+    border-radius: 0px;
+    color: #131413;
+    transition: $transition;
+
+    &:focus {
+      background: $clrWhite;
+      border-color: $clrBtn;
+      color: #131413;
+    }
+    &:hover {
+      background: $clrWhite;
+      border-color: $clrBtn;
+      color: #131413;
+    }
+  }
+  &-filled {
+    border: 2px solid $clrBtn;
+    background: transparent;
+    border-radius: 28px;
+    color: $clrPrimary;
+    transition: $transition;
+    &:focus {
+      box-shadow: none;
+    }
+
+    // &::before {
+    //   background: $clrPrimary;
+    // }
+
+    &:hover {
+      background: $clrBtn;
+      color: $clrWhite;
+    }
+  }
+}

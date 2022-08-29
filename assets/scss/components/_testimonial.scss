@@ -1,0 +1,102 @@
+.product__caro-sec {
+  padding: 64px 0px;
+  @include respond(medium) {
+    padding: 44px 0px;
+  }
+  @include respond(tabland) {
+    padding: 32px 0px;
+  }
+  .section__wrapper-title {
+    margin-bottom: -64px;
+  }
+  .slide-item img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+  }
+  .view__project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -100px;
+    @include respond(tabland) {
+      margin-top: -70px;
+    }
+    .btn {
+      font-size: 22px;
+      line-height: 140%;
+      text-align: center;
+      text-transform: uppercase;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      @include respond(medium) {
+        width: 150px;
+        height: 150px;
+        font-size: 20px;
+      }
+      @include respond(tabland) {
+        width: 120px;
+        height: 120px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.testimonial-section {
+  padding: 64px 0px;
+  @include respond(medium) {
+    padding: 44px 0px;
+  }
+  @include respond(tabland) {
+    padding: 32px 0px;
+  }
+  .quote-icon {
+    img {
+      width: auto;
+    }
+    margin-bottom: 32px;
+  }
+  .slide-content {
+    width: 100%;
+    max-width: 920px;
+    margin: auto;
+    padding: 0px 50px;
+    @include respond(tabport) {
+      padding: 0px 25px;
+    }
+    @include respond(phone-sm) {
+      padding: 0px 10px;
+    }
+    .block__content {
+      p {
+        font-family: $fontMADEMirage;
+        font-weight: $fontRegular;
+        font-size: 28px;
+        line-height: 140%;
+        color: $clrContent;
+        text-align: center;
+        @include respond(medium) {
+          font-size: 24px;
+        }
+        @include respond(tabland) {
+          font-size: 22px;
+        }
+        @include respond(tabport) {
+          font-size: 20px;
+        }
+        @include respond(phone) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  & {
+    @include carousel-nav;
+    .owl-carousel .owl-nav {
+      display: none;
+    }
+  }
+}

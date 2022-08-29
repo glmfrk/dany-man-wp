@@ -1,0 +1,59 @@
+.banner-section {
+  position: relative;
+  padding: 160px 0px 64px;
+  @include respond(medium) {
+    padding: 140px 0px 44px;
+  }
+  @include respond(tabland) {
+    padding-bottom: 32px;
+  }
+  @include respond(tabport) {
+    padding-top: 120px;
+  }
+
+  .hero_content {
+    padding-right: 205px;
+    position: relative;
+    @include respond(xl) {
+      padding-right: 160px;
+    }
+    @include respond(medium) {
+      padding-right: 120px;
+    }
+    @include respond(tabland) {
+      padding-right: 70px;
+    }
+    @include respond(tabport) {
+      padding-right: 20px;
+    }
+    .hero_content-title {
+      margin-bottom: -64px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .right-scroll-bar {
+    font-family: $fontGraphik;
+    font-weight: $fontRegular;
+    font-size: 14px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $clrContent;
+
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+    align-items: center;
+    transform: rotate(90deg);
+    transform-origin: right;
+    span {
+      display: inline-block;
+      width: 50px;
+      background: #fff;
+      height: 1px;
+      margin-left: 5px;
+    }
+  }
+}

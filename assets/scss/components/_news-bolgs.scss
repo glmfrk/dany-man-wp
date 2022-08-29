@@ -1,0 +1,158 @@
+.news__offer-sec {
+  padding: 64px 0px 98px;
+  @include respond(medium) {
+    padding: 44px 0px 80px;
+  }
+  @include respond(tabland) {
+    padding: 32px 0px 60px;
+  }
+  @include respond(phone) {
+    padding-bottom: 50px;
+  }
+  img {
+    width: 100%;
+  }
+  .section-title {
+    .title__content {
+      @include respond(tabland) {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+  .section-title {
+    &::after {
+      display: none;
+    }
+  }
+  .col-6 {
+    @include respond(phone-sm) {
+      width: 100%;
+    }
+  }
+}
+
+.column-item {
+  position: relative;
+  transition: $transition;
+  margin-bottom: 30px;
+  &:hover {
+    cursor: pointer;
+    &::after {
+      transform: translate(3px, 2px) rotate(-0.5deg);
+    }
+    .image {
+      img {
+        transform: translate(3px, 2px) rotate(-0.5deg);
+      }
+    }
+    .contents {
+      transform: translate(3px, 2px) rotate(-0.5deg);
+      .category-title,
+      .title__content {
+        color: $clrPrimary;
+      }
+    }
+  }
+  .image {
+    img {
+      transition: $transition;
+    }
+  }
+  .contents {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: $transition;
+    @include respond(tabport) {
+      padding: 24px;
+    }
+    @include respond(phone) {
+      padding: 20px;
+    }
+    .category-title {
+      font-family: $fontGraphik;
+      font-weight: $fontRegular;
+      font-size: 22px;
+      line-height: 24px;
+      color: $clrContent;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      @include respond(tabland) {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      @include respond(tabport) {
+        font-size: 16px;
+      }
+      @include respond(phone) {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      a {
+        display: inherit;
+        margin: inherit;
+        color: inherit;
+        transition: $transition;
+        &:hover {
+          color: $clrPrimary;
+        }
+      }
+    }
+    .title__content {
+      font-family: $fontMADEMirage;
+      font-weight: $fontRegular;
+      font-size: 38px;
+      line-height: 140%;
+      color: $clrContent;
+      margin: 0;
+      @include respond(medium) {
+        font-size: 29px;
+      }
+      @include respond(tabland) {
+        font-size: 27px;
+      }
+      @include respond(tabport) {
+        font-size: 24px;
+      }
+      @include respond(phone) {
+        font-size: 20px;
+      }
+      a {
+        margin: inherit;
+        display: inherit;
+        color: inherit;
+        transition: $transition;
+        &:hover {
+          color: $clrPrimary;
+        }
+      }
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 20, 19, 0.8);
+    box-sizing: border-box;
+    transition: $transition;
+  }
+  .btn {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $body-color;
+  }
+}

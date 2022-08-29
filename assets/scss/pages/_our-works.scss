@@ -1,0 +1,59 @@
+.portfolio-section {
+  position: relative;
+  padding: 160px 0px 64px;
+  @include respond(medium) {
+    padding: 140px 0px 44px;
+  }
+  @include respond(tabland) {
+    padding-bottom: 32px;
+  }
+  @include respond(tabport) {
+    padding-top: 120px;
+  }
+  .col-6 {
+    @include respond(phone-sm) {
+      width: 100%;
+    }
+  }
+
+  .section__wrapper-title {
+    margin-bottom: 60px;
+    .sec__title {
+      text-align: left;
+    }
+  }
+
+  .column-item {
+    &::after {
+      background: rgba(19, 20, 19, 0.64);
+    }
+    .contents {
+      @include respond(tabport) {
+        padding: 24px;
+      }
+      .title__content {
+        font-size: 50px;
+        @include respond(xl) {
+          font-size: 42px;
+        }
+        @include respond(medium) {
+          font-size: 36px;
+        }
+        @include respond(tabland) {
+          font-size: 32px;
+        }
+        @include respond(tabport) {
+          font-size: 22px;
+        }
+      }
+      .category-title {
+        @include respond(tabport) {
+          font-size: 16px;
+        }
+        @include respond(phone) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
